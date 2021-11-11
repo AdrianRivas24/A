@@ -1,5 +1,5 @@
 # AdrianRivas_Programacion
 
-## Cambio local
+## Cambio Local
 
-### Cambio desde repositorio de red
+### Cambio desde Repositorio de red
