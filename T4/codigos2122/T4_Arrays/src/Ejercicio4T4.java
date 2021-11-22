@@ -14,17 +14,29 @@ public class Ejercicio4T4 {
 		numeros = new int[longitud];
 		
 		for (int i = 0; i < numeros.length; i++) {
-		
-		for (int i = 0; i < numeros.length; i++) {
-			if (numeros[i]<minimo) {
-				minimo = numeros[i];}
-			
-			if (numeros[i]<maximo) {
-				maximo = numeros[i];}
-			
-			
-		
-		
+            System.out.println("Por favor introduce numero");
+            int numeroInto = lecturaTeclado.nextInt();
+            numeros[i] = numeroInto;
+        }
+
+        System.out.println("Desordenados");
+
+        for ( int item: numeros) {
+            System.out.println(item);
+        }
+
+        System.out.println("Ordenados");
+
+        Arrays.sort(numeros);
+
+        for ( int item: numeros) {
+            System.out.println(item);
+        }
+
+        System.out.println("El mayor es "+numeros[numeros.length-1]);
+        System.out.println("El menor es "+numeros[0]);
+
+
 		lecturaTeclado.close();
 	}
 
