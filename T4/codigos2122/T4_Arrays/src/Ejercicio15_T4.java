@@ -22,11 +22,36 @@ public class Ejercicio15_T4 {
 		alumnos[2][3] = 2;
 		alumnos[2][4] = true;
 		
-		String nombre = alumnos[0][0];
-		double media = ((double)((int)alumnos[0][1] + (int)alumnos[0][2] + (int)alumnos[0][3])/3);
-		boolean conv = (boolean)(alumnos[0][alumnos[0].length-1]);
-		System.out.printf("%s tiene una media de %.2f y tiene asignaturas convalidadas", nombre, media);
-		System.out.printf("%s tiene una media de %.2f y no tiene asignaturas convalidadas", nombre, media);
+		if (alumnos[0][0] != null){
+            // nunca han metido alumnos en la primera posicion
+        }
+
+
+        for (int i = 0; i < alumnos.length; i++) {
+
+            int sumatorio=0;
+            int suspensas=0;
+            double media=0.0;
+
+            for (int j = 1; j <  4; j++) {
+                System.out.println((alumnos[i][j]));
+                sumatorio +=(int) (alumnos[i][j]);
+                if ((int)alumnos[i][j]<5){
+                    suspensas++;
+                }
+            }
+            media = (double) sumatorio / (double) alumnos.length;
+
+            boolean conv = (boolean)(alumnos[i][alumnos[i].length-1]);
+            String nombre = (String) alumnos[i][0];
+            if (conv== true){
+                System.out.printf("%s tiene una media de %.2f, %d suspensas y tiene asignaturas cv",nombre,media,suspensas  );
+            } else {
+                System.out.printf("%s tiene una media de %.2f, %d suspensas y y no tiene asignaturas cv",nombre,media,suspensas );
+            }
+
+        }
+
 		
 	}
 
